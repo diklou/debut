@@ -8,13 +8,44 @@
  * ------------------------------------------------------------
  */
 {
-  "order": [
-    "product-recommendations",
-    "main",
-    "product-back-to-collection"
-  ],
   "sections": {
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "heading": "You may also like",
+        "show_vendor": false
+      }
+    },
     "main": {
+      "type": "product-template",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+          }
+        }
+      },
       "block_order": [
         "title",
         "price",
@@ -22,50 +53,25 @@
         "description",
         "share"
       ],
-      "blocks": {
-        "buttons": {
-          "settings": {},
-          "type": "buttons"
-        },
-        "description": {
-          "settings": {},
-          "type": "description"
-        },
-        "price": {
-          "settings": {},
-          "type": "price"
-        },
-        "share": {
-          "settings": {},
-          "type": "share"
-        },
-        "title": {
-          "settings": {},
-          "type": "title"
-        }
-      },
       "settings": {
-        "enable_image_zoom": true,
-        "enable_payment_button": true,
-        "enable_video_looping": false,
-        "media_size": "medium",
         "show_quantity_selector": false,
+        "show_vendor": false,
+        "enable_payment_button": true,
         "show_share_buttons": true,
-        "show_vendor": false
-      },
-      "type": "product-template"
+        "media_size": "medium",
+        "enable_image_zoom": true,
+        "enable_video_looping": false
+      }
     },
     "product-back-to-collection": {
-      "settings": {},
-      "type": "product-back-to-collection"
-    },
-    "product-recommendations": {
+      "type": "product-back-to-collection",
       "settings": {
-        "heading": "You may also like",
-        "show_product_recommendations": true,
-        "show_vendor": false
-      },
-      "type": "product-recommendations"
+      }
     }
-  }
+  },
+  "order": [
+    "product-recommendations",
+    "main",
+    "product-back-to-collection"
+  ]
 }

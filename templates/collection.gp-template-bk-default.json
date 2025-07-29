@@ -8,13 +8,13 @@
  * ------------------------------------------------------------
  */
 {
-  "order": [
-    "main"
-  ],
   "sections": {
     "main": {
-      "settings": {},
-      "type": "collection-template"
+      "type": "collection-template",
+      "settings": {}
     }
-  }
+  },
+  "order": [
+    "main"
+  ]
 }
