@@ -13,6 +13,7 @@
     "type_header_base_size": 20,
     "type_base_font": "lato_n4",
     "type_base_size": 14,
+    "predictive_search_enabled": false,
     "sections": {
       "header": {
         "type": "header",
