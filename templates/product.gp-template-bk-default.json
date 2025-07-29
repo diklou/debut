@@ -1,0 +1,71 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "order": [
+    "product-recommendations",
+    "main",
+    "product-back-to-collection"
+  ],
+  "sections": {
+    "main": {
+      "block_order": [
+        "title",
+        "price",
+        "buttons",
+        "description",
+        "share"
+      ],
+      "blocks": {
+        "buttons": {
+          "settings": {},
+          "type": "buttons"
+        },
+        "description": {
+          "settings": {},
+          "type": "description"
+        },
+        "price": {
+          "settings": {},
+          "type": "price"
+        },
+        "share": {
+          "settings": {},
+          "type": "share"
+        },
+        "title": {
+          "settings": {},
+          "type": "title"
+        }
+      },
+      "settings": {
+        "enable_image_zoom": true,
+        "enable_payment_button": true,
+        "enable_video_looping": false,
+        "media_size": "medium",
+        "show_quantity_selector": false,
+        "show_share_buttons": true,
+        "show_vendor": false
+      },
+      "type": "product-template"
+    },
+    "product-back-to-collection": {
+      "settings": {},
+      "type": "product-back-to-collection"
+    },
+    "product-recommendations": {
+      "settings": {
+        "heading": "You may also like",
+        "show_product_recommendations": true,
+        "show_vendor": false
+      },
+      "type": "product-recommendations"
+    }
+  }
+}
