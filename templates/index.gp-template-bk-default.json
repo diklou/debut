@@ -9,46 +9,15 @@
  */
 {
   "sections": {
-    "image-bar": {
-      "type": "image-bar",
-      "blocks": {
-        "image-bar-0": {
-          "type": "image",
-          "settings": {
-            "alignment": "center",
-            "link": "",
-            "cta_label": ""
-          }
-        },
-        "image-bar-1": {
-          "type": "image",
-          "settings": {
-            "alignment": "center",
-            "link": "",
-            "cta_label": ""
-          }
-        },
-        "image-bar-2": {
-          "type": "image",
-          "settings": {
-            "alignment": "center",
-            "link": "",
-            "cta_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "image-bar-0",
-        "image-bar-1",
-        "image-bar-2"
-      ],
-      "disabled": true,
+    "gp_shopify_original_section_577600340271038992": {
       "settings": {
-        "section_height": "medium"
-      }
+        "checksum": "",
+        "section_preload": "true"
+      },
+      "type": "gp-section-577600340271038992"
     }
   },
   "order": [
-    "image-bar"
+    "gp_shopify_original_section_577600340271038992"
   ]
 }
