@@ -1,0 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "order": [
+    "image-bar"
+  ],
+  "sections": {
+    "image-bar": {
+      "block_order": [
+        "image-bar-0",
+        "image-bar-1",
+        "image-bar-2"
+      ],
+      "blocks": {
+        "image-bar-0": {
+          "settings": {
+            "alignment": "center",
+            "cta_label": "",
+            "link": ""
+          },
+          "type": "image"
+        },
+        "image-bar-1": {
+          "settings": {
+            "alignment": "center",
+            "cta_label": "",
+            "link": ""
+          },
+          "type": "image"
+        },
+        "image-bar-2": {
+          "settings": {
+            "alignment": "center",
+            "cta_label": "",
+            "link": ""
+          },
+          "type": "image"
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "section_height": "medium"
+      },
+      "type": "image-bar"
+    }
+  }
+}
