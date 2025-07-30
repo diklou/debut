@@ -15,9 +15,16 @@
         "section_preload": "true"
       },
       "type": "gp-section-577706034584355344"
+    },
+    "gp_shopify_original_section_577708682532357061": {
+      "settings": {
+        "checksum": ""
+      },
+      "type": "gp-section-577708682532357061"
     }
   },
   "order": [
-    "gp_shopify_original_section_577706034584355344"
+    "gp_shopify_original_section_577706034584355344",
+    "gp_shopify_original_section_577708682532357061"
   ]
 }
