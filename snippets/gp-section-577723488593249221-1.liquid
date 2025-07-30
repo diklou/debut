@@ -124,7 +124,7 @@
     <div data-id="gGdkjzYYQd"
         class="gGdkjzYYQd"
         style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1753879946603"
+        data-test-force-publish="1753880030270"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -157,7 +157,7 @@
     <div data-id="gNxFI4sRb7"
         class="gNxFI4sRb7"
         style="--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1753879946604"
+        data-test-force-publish="1753880030271"
       >
       <div  >
         <h1
@@ -277,7 +277,7 @@
     <div data-id="g8VY1dntcj"
         class="g8VY1dntcj"
         style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1753879946606"
+        data-test-force-publish="1753880030273"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -330,7 +330,7 @@
     <div id="p-price-gKvVpgde6Y" data-id
         
         style="--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1753879946607"
+        data-test-force-publish="1753880030274"
       >
       <div  >
         <div
@@ -367,7 +367,7 @@
     <div id="p-price-gTVgRKfocN" data-id
         
         style="--dynamic-source-color:#F4F4F4"
-        data-test-force-publish="1753879946607"
+        data-test-force-publish="1753880030274"
       >
       <div  >
         <div
@@ -391,163 +391,10 @@
   
     </div><div
       data-same-height-display-contents
-      style="--jc:center"
+      style="--jc:center;--d:none;--d-tablet:none;--d-mobile:none"
       class="gWpds5fJwt gp-relative gp-flex gp-flex-col"
     >
       
-    {% if product %}
-      
-    {% assign content = section.settings.ggi7eoJKOS-_displayContent %}
-
-    {%if content.size > 0 %}
-      {% if variant.compare_at_price and variant.compare_at_price > 0 %}
-        {% assign amountDiscount = variant.compare_at_price | minus: variant.price %}
-        {% assign percentDiscount = amountDiscount | times: 100.0 | divided_by: variant.compare_at_price | round%}
-      {% else %}
-        {% assign amountDiscount = 0 %}
-        {% assign percentDiscount = 0 %}
-      {% endif %}
-
-      {% assign percentDiscountValue = percentDiscount | append: "%" %}
-      {% assign amountDiscountValue = amountDiscount | money_without_trailing_zeros %}
-      {% assign price = variant.price | divided_by: 100 %}
-      {% assign minPriceValue = product.variants | map: "price" | sort | first | money_without_trailing_zeros %}
-      {% assign inventoryQuantityValue = variant.inventory_quantity %}
-
-      {% assign percentDiscountKey = "{percent_discount}" %}
-      {% assign amountDiscountKey = "{amount_discount}" %}
-      {% assign minPriceKey = "{min_price}" %}
-      {% assign inventoryQuantityKey = "{inventory_quantity}" %}
-    {% endif %}
-  
-      
-  {% assign isShow = true %}
-  {% assign conditionTriggers = "" %}
-  {% assign isInventoryStatus = false %}
-  {% assign isDiscountPrice = false %}
-  {% assign isPriceRange = false %}
-  {% assign isCreationDate = false %}
-  {% assign isProductTag = false %}
-  
-      {% assign type = "in_stock" %}
-      {% assign shouldContinue = false %}
-      {% if variant.inventory_policy == "continue" and type != "out_of_stock" %}
-        {% assign shouldContinue = true %}
-      {% endif %}
-      {% if variant.inventory_management == null or shouldContinue  %}
-        {% assign conditionTriggers = conditionTriggers | append: "," | append: true %}
-      {% elsif variant.inventory_quantity != null %}
-        {% assign compareValue = variant.inventory_quantity %}
-        {% if type == "in_stock" %}
-          {% assign conditionType = "exact_or_above" %}
-          {% assign from = 1 %}
-          {% assign to = 15 %}
-          
-    {% assign enabled = false %}
-    {% case conditionType %}
-      {% when "exact" %}
-        {% if compareValue == from %}
-          {% assign enabled = true %}
-        {% endif %}
-      {% when "above" %}
-        {% if compareValue > from %}
-          {% assign enabled = true %}
-        {% endif %}
-      {% when "below" %}
-        {% if compareValue < from %}
-          {% assign enabled = true %}
-        {% endif %}
-      {% when "exact_or_above" %}
-        {% if compareValue >= from %}
-          {% assign enabled = true %}
-        {% endif %}
-      {% when "exact_or_below" %}
-        {% if compareValue <= from %}
-          {% assign enabled = true %}
-        {% endif %}
-      {% when "between" %}
-        {% if compareValue >= from and compareValue <= to %}
-          {% assign enabled = true %}
-        {% endif %}
-      {% else %}
-        {% assign enabled = false %}
-    {% endcase %}
-  
-          {% if conditionType == "below" or conditionType == "exact_or_below" %}
-            {% assign min = 1 %}
-            {% assign from = 1 %}
-            {% assign to = from | minus: min | plus: 1 %}
-            {% if compareValue >= from and compareValue <= to %}
-              {% assign enabled = true %}
-            {% else %}
-              {% assign enabled = false %}
-            {% endif %}
-          {% endif %}
-          {% assign isInventoryStatus = enabled %}
-        {% else %}
-          {% if compareValue <= 0 and variant.inventory_policy != "continue"  %}
-            {% assign isInventoryStatus = true %}
-          {% endif %}
-        {% endif %}
-        {% assign conditionTriggers = conditionTriggers | append: "," | append: isInventoryStatus %}
-      {% else %}
-        {% assign conditionTriggers = conditionTriggers | append: "," | append: false %}
-      {% endif %}
-
-  
-  {% assign trigger_arr = conditionTriggers | split: "," %}
-  {% for trigger in trigger_arr %}
-    {% if trigger == "false" %}
-      {% assign isShow = false %}
-    {% endif %}
-  {% endfor %}
-  {% assign price = variant.price | times: 1.0 %}
-  {% assign salePrice = variant.compare_at_price | times: 1.0 %}
-  {% assign priceSave = salePrice | minus: price %}
-  {% assign isDiscountContent = true %}
-  {% assign isTextBadge = true %}
-  {% if priceSave <= 0 or isDiscountContent == false or isTextBadge == false or variant.inventory_management == nil %}
-    {% assign isShow = false %}
-  {% endif %}
-  {% if isShow %}
-    {% assign className = "" %}
-  {% else %}
-    {% assign className = "!gp-hidden" %}
-  {% endif %}
-  
-      <gp-product-badge
-        data-id="gi7eoJKOS-" id="g-product-badge-gi7eoJKOS-" gp-data-hidden="false"
-        gp-data='{"minPrice":"{{ minPriceValue | replace: '"', '\\"' | escape }}","variantIDs":"{{  product.variants | map: "id" | json | escape }}","variantInventoryQuantities":"{{ product.variants | map: "inventory_quantity" | json | escape }}","amountDiscount":"{{amountDiscountValue | replace: '"', '\\"' | escape }}","percentDiscount":"{{percentDiscountValue}}","price":"{{price}}","displayTrigger":[{"conditionType":"exact_or_above","from":"1","priority":0,"quantityType":"exact_or_above","to":"15","triggerEvent":"inventory_status","type":"in_stock"}],"uid":"gi7eoJKOS-","productCreatedAt":"{{product.created_at | date: "%Y-%m-%d" }}","productTags":"{{ product.tags | join: "," }}","isTextBadge":true}'
-        class="containerClass {{className}}"
-        style="z-index:1;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:none;--d-mobile:block;--d-tablet:none;--op:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;--mb:4px;--mb-mobile:0px"
-        data-display-content="{{ section.settings.ggi7eoJKOS-_displayContent }}"
-      >
-        <div class="gp-flex gp-justify-start ">
-          <div
-            data-product-id id="gi7eoJKOS-"
-            class="gp-h-full"
-            style="--w:auto;--w-tablet:auto;--w-mobile:auto;--h:auto;--h-tablet:auto;--h-mobile:auto;--mb:0;opacity:1"
-          >
-            <style></style>
-            
-                <div class="gp-w-full gp-h-full gp-overflow-hidden product-badge-item">
-                  <div
-                    class="gp-w-full gp-h-full gp-flex gp-items-center gp-justify-center gp-overflow-hidden"
-                    style="--btlr:3px;--btlr-tablet:3px;--btlr-mobile:3px;--btrr:3px;--btrr-tablet:3px;--btrr-mobile:3px;--bblr:3px;--bblr-tablet:3px;--bblr-mobile:3px;--bbrr:3px;--bbrr-tablet:3px;--bbrr-mobile:3px;--bg:#97F4BD;--bg-tablet:#97F4BD;--bg-mobile:#97F4BD;height:100%"
-                  >
-                    <pre
-                      id="product-badge-content"
-                      class="gp-break-words gp-text-center "
-                      style="--ws:pre-wrap;--ws-tablet:pre-wrap;--ws-mobile:pre-wrap;--fs:normal;--ff:var(--g-font-body, body);--weight:600;--ls:normal;--size:13px;--size-mobile:12px;--lh:130%;--lh-tablet:130%;--lh-mobile:150%;--c:#242424;--tt:uppercase;--ts:none;--pl:var(--g-s-s);--pr:var(--g-s-s);--pt:var(--g-s-xs);--pb:var(--g-s-xs)"
-                    >{{ content | replace: percentDiscountKey, percentDiscountValue | replace: amountDiscountKey, amountDiscountValue | replace: inventoryQuantityKey, inventoryQuantityValue | replace: minPriceKey, minPriceValue }}</pre>
-                  </div>
-                </div>
-          </div>
-        </div>
-      </gp-product-badge>
-       <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-badge-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
-    {% endif %}
-  
     </div>
 
       
@@ -997,7 +844,7 @@
 
     <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-variant-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
   
-      </div><div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:none;--d-mobile:block;--d-tablet:none;--op:100%;--op-mobile:100%;--op-tablet:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;--mb:11px;--mb-tablet:0px;--mb-mobile:11px" class="gnfi0W2J7I ">
+      </div><div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:none;--d-mobile:block;--d-tablet:none;--op:100%;--op-mobile:100%;--op-tablet:100%;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;--mb:19px;--pt:0px;--pl:0px;--pb:0px;--pr:0px;--mb-tablet:0px;--mb-mobile:19px;--pt-mobile:0px;--pl-mobile:0px;--pb-mobile:0px;--pr-mobile:0px" class="gnfi0W2J7I ">
       
     {%- assign total_combinations = 1 -%}
     {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
