@@ -10,6 +10,17 @@
 {
   "sections": {
     "gp_shopify_original_section_577706034584355344": {
+      "block_order": [
+        "gp_app_kaching-bundles_gVc-mtOmiV"
+      ],
+      "blocks": {
+        "gp_app_kaching-bundles_gVc-mtOmiV": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "hair-skin-nails-1"
+          }
+        }
+      },
       "settings": {
         "checksum": "",
         "section_preload": "true"
