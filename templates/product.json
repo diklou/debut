@@ -57,6 +57,12 @@
         "checksum": ""
       },
       "type": "gp-section-577712399792997052"
+    },
+    "gp_shopify_original_section_577721319903199932": {
+      "settings": {
+        "checksum": ""
+      },
+      "type": "gp-section-577721319903199932"
     }
   },
   "order": [
@@ -67,6 +73,7 @@
     "gp_shopify_original_section_577712399792997052",
     "gp_shopify_original_section_577709442473132997",
     "gp_shopify_original_section_577710269472440848",
+    "gp_shopify_original_section_577721319903199932",
     "gp_shopify_original_section_577709856283165372"
   ]
 }
