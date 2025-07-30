@@ -9,15 +9,15 @@
  */
 {
   "sections": {
-    "gp_section_577730330878804754": {
+    "gp_global_section_577731038189454277-1": {
       "settings": {
-        "checksum": "09b57eb1e3fe1293106f820ac1ed3d622a80c82d7c849e4d758af1e197165a46_1_1_1_0_",
+        "checksum": "",
         "section_preload": "true"
       },
-      "type": "gp-section-577730330878804754"
+      "type": "gp-global-section-577731038189454277"
     }
   },
   "order": [
-    "gp_section_577730330878804754"
+    "gp_global_section_577731038189454277-1"
   ]
 }
