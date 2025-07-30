@@ -27,11 +27,25 @@
         "checksum": ""
       },
       "type": "gp-section-577731440658088636"
+    },
+    "gp_shopify_original_section_577731866145063877": {
+      "settings": {
+        "checksum": ""
+      },
+      "type": "gp-section-577731866145063877"
+    },
+    "gp_shopify_original_section_577731866296058384": {
+      "settings": {
+        "checksum": ""
+      },
+      "type": "gp-section-577731866296058384"
     }
   },
   "order": [
     "gp_shopify_original_section_577600340271038992",
     "gp_shopify_original_section_577603988543767228",
-    "gp_shopify_original_section_577731440658088636"
+    "gp_shopify_original_section_577731440658088636",
+    "gp_shopify_original_section_577731866296058384",
+    "gp_shopify_original_section_577731866145063877"
   ]
 }
